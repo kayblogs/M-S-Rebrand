@@ -1,0 +1,163 @@
+/* Brand Consistency: Modern Palette */
+:root {
+    --ms-green: #1d3a31;
+    --eco-white: #f9f9f9;
+    --text-dark: #222;
+    --transition-speed: 0.3s;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Modern Sans-serif choice */
+    background-color: var(--eco-white);
+    color: var(--text-dark);
+}
+
+/* Structural Element: Sticky Header */
+.main-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px); /* Modern vibe */
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--ms-green);
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.nav-menu a:hover {
+    color: var(--ms-green);
+}
+
+/* Structural Element: Sidebar */
+.sparks-sidebar {
+    position: fixed;
+    right: 0;
+    top: 70px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transform: translateX(100%); /* Initial state hidden */
+    transition: transform var(--transition-speed) ease-in-out;
+}
+
+/* Accessibility: Ensuring clickable areas are large enough */
+.header-icons span {
+    padding: 10px;
+    cursor: pointer;
+}
+/* Static Content Styling */
+.static-showcase {
+    padding: 2rem 5%;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    margin-bottom: 1000px;
+    border-radius: 12px; /* Modern aesthetic */
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.progress-track {
+    width: 100%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--ms-green);
+    transform-origin: left;
+    transition: transform 1.2s ease-in-out; /* Nature and Duration */
+}
+
+/* Icons and Pillars (Structural Elements for Static Content) */
+.brand-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pillar {
+    text-align: center;
+    padding: 20px;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    filter: invert(18%) sepia(13%) saturate(1615%) hue-rotate(113deg) brightness(91%) contrast(88%); /* M&S Green */
+}
+
+/* Typography Branding */
+h2, h3 {
+    color: var(--ms-green);
+    letter-spacing: -0.5px;
+}
+/* Dynamic Content: Skeleton Shimmer Effect */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Dynamic Content: Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
