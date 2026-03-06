@@ -18,4 +18,4 @@ Performance (Scalability): Assets are optimized to maintain a sub-2-second load 
 
 Accessibility: All code adheres to WCAG 2.1 Level AA standards to ensure inclusivity for older demographics and users with disabilities.
 
-Dynamic Engagement: Implemented a scroll-reveal system using a mathematical trigger point:
+Dynamic Engagement: Implemented a scroll-reveal system using a mathematical trigger point: Trigger = WindowHeight - 150px
